@@ -1,0 +1,9 @@
+[hooks]
+pre = ["setup.rhai"]
+post = ["cleanup.rhai"]
+
+[placeholders.license]
+type = "string"
+prompt = "What license to use?"
+choices = ["APACHE", "MIT", "BSD3", "BSD2", "GPL", "LGPL", "MOZILLA", "PUBLIC"]
+default="MIT"
