@@ -5,6 +5,7 @@ let crate_type = variable::get("crate_type");
 debug(`crate_type: ${crate_type}`);
 
 let license = variable::get("license").to_upper();
+debug(`license: ${license}`);
 
 //"APACHE", "MIT", "BSD", "GPL", "LGPL", "MOZILLA", "PUBLIC"
 while switch license {
