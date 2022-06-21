@@ -2,28 +2,6 @@
 name = "{{project-name}}"
 version = "0.1.0"
 authors = ["{{authors}}"]
-edition = "2021"
-
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
-
-[dependencies]
-{% if crate_type == "bin" %}
-#bin package dependencies
-
-{% endif %}
-{% if crate_type == "lib" %}
-#lib package dependencies
-
-{% endif %}
-#shared general dependencies
-
-{% if crate_type = "bin" %}
-[[bin]]
-path = "src/main.rs"
-name = "{{crate_name}}" #snake case of "project_name"
-{% endif %}
-
-
-
-
-
+license = "MIT OR Apache-2.0"
+readme = "README.md"
+edition = "2018"
