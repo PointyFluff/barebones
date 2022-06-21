@@ -23,7 +23,7 @@ path = "src/main.rs"
 name = "{{crate_name}}-cli"
 {% endif %}
 
-{% if crate_type == "bin" %}
+{% if crate_type == "lib" %}
 [lib]
 path = "src/lib.rs"
 name = "{{crate_name}}-lib"
