@@ -10,42 +10,42 @@ let license = variable::get("license").to_upper();
 while switch license {
     "APACHE" => {
         // https://apache.org/licenses/LICENSE-2.0.txt
-        file::rename("license/apache", "LICENSE");
+        file::rename("license/apache.liquid", "LICENSE");
         false
     }
     "MIT" => {
         // https://mit-license.org/
-        file::rename("license/mit", "LICENSE");
+        file::rename("license/mit.liquid", "LICENSE");
         false
     }
     "BSD3" => {
         // https://opensource.org/licenses/BSD-3-Clause
-        file::rename("license/bsd3", "LICENSE");
+        file::rename("license/bsd3.liquid", "LICENSE");
         false
     }
     "BSD2" => {
         // https://opensource.org/licenses/BSD-2-Clause
-        file::rename("license/bsd2", "LICENSE");
+        file::rename("license/bsd2.liquid", "LICENSE");
         false
     }
     "GPL" => {
         // https://www.gnu.org/licenses/gpl-3.0.txt
-        file::rename("license/gpl", "LICENSE");
+        file::rename("license/gpl.liquid", "LICENSE");
         false
     } 
     "LGPL" => {
         // https://www.gnu.org/licenses/lgpl-3.0.txt
-        file::rename("license/lgpl", "LICENSE");
+        file::rename("license/lgpl.liquid", "LICENSE");
         false
     }
     "MOZILLA" => {
         // https://www.mozilla.org/media/MPL/2.0/index.48a3fe23ed13.txt
-        file::rename("license/mozilla", "LICENSE");
+        file::rename("license/mozilla.liquid", "LICENSE");
         false
     }
     "PUBLIC" => {
         // https://unlicense.org/UNLICENSE
-        file::rename("license/unlicense", "LICENSE");
+        file::rename("license/unlicense.liquid", "LICENSE");
         false
     }
     _ => true,
