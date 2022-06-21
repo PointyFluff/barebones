@@ -5,3 +5,14 @@ authors = ["{{authors}}"]
 license = "MIT OR Apache-2.0"
 readme = "README.md"
 edition = "2018"
+
+[dependencies]
+{% if crate_type == "bin" %}
+{% endif %}
+# other general dependencies
+
+{% if crate_type == "bin" %}
+[[bin]]
+path = "src/main.rs"
+name = "{{crate_name}}-cli"
+{% endif %}
