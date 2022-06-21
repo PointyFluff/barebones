@@ -30,6 +30,7 @@ while switch license {
         file::delete("licenses/lgpl.liquid");
         file::delete("licenses/mozilla.liquid");
         file::delete("licenses/unlicense.liquid");
+        file::delete("licenses");
         false
     }
     "BSD3" => {
