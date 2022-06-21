@@ -8,11 +8,23 @@ edition = "2018"
 
 [dependencies]
 {% if crate_type == "bin" %}
+# bin deps go here
+# -------------------------
+{% endif %}
+{% if crate_type == "lib" %}
+# lib deps go here
+# -------------------------
 {% endif %}
 # other general dependencies
 
 {% if crate_type == "bin" %}
-[[bin]]
+[bin]
 path = "src/main.rs"
 name = "{{crate_name}}-cli"
+{% endif %}
+
+{% if crate_type == "bin" %}
+[lib]
+path = "src/lib.rs"
+name = "{{crate_name}}-lib"
 {% endif %}
