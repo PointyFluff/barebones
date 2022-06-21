@@ -23,13 +23,6 @@ while switch license {
     "MIT" => {
         // https://mit-license.org/
         file::rename("licenses/mit.liquid", "LICENSE");
-        file::delete("licenses/apache.liquid");
-        file::delete("licenses/bsd3.liquid");
-        file::delete("licenses/bsd2.liquid");
-        file::delete("licenses/gpl.liquid");
-        file::delete("licenses/lgpl.liquid");
-        file::delete("licenses/mozilla.liquid");
-        file::delete("licenses/unlicense.liquid");
         file::delete("licenses");
         false
     }
