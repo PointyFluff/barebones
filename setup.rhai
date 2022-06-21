@@ -11,41 +11,94 @@ while switch license {
     "APACHE" => {
         // https://apache.org/licenses/LICENSE-2.0.txt
         file::rename("licenses/apache.liquid", "LICENSE");
+        file::delete("licenses/mit.liquid");
+        file::delete("licenses/bsd3.liquid");
+        file::delete("licenses/bsd2.liquid");
+        file::delete("licenses/gpl.liquid");
+        file::delete("licenses/lgpl.liquid");
+        file::delete("licenses/mozilla.liquid");
+        file::delete("licenses/unlicense.liquid");
         false
     }
     "MIT" => {
         // https://mit-license.org/
         file::rename("licenses/mit.liquid", "LICENSE");
+        file::delete("licenses/apache.liquid");
+        file::delete("licenses/bsd3.liquid");
+        file::delete("licenses/bsd2.liquid");
+        file::delete("licenses/gpl.liquid");
+        file::delete("licenses/lgpl.liquid");
+        file::delete("licenses/mozilla.liquid");
+        file::delete("licenses/unlicense.liquid");
         false
     }
     "BSD3" => {
         // https://opensource.org/licenses/BSD-3-Clause
         file::rename("licenses/bsd3.liquid", "LICENSE");
+        file::delete("licenses/apache.liquid");
+        file::delete("licenses/mit.liquid");
+        file::delete("licenses/bsd2.liquid");
+        file::delete("licenses/gpl.liquid");
+        file::delete("licenses/lgpl.liquid");
+        file::delete("licenses/mozilla.liquid");
+        file::delete("licenses/unlicense.liquid");
         false
     }
     "BSD2" => {
         // https://opensource.org/licenses/BSD-2-Clause
         file::rename("licenses/bsd2.liquid", "LICENSE");
+        file::delete("licenses/apache.liquid");
+        file::delete("licenses/mit.liquid");
+        file::delete("licenses/bsd3.liquid");
+        file::delete("licenses/gpl.liquid");
+        file::delete("licenses/lgpl.liquid");
+        file::delete("licenses/mozilla.liquid");
+        file::delete("licenses/unlicense.liquid");
         false
     }
     "GPL" => {
         // https://www.gnu.org/licenses/gpl-3.0.txt
         file::rename("licenses/gpl.liquid", "LICENSE");
+        file::delete("licenses/apache.liquid");
+        file::delete("licenses/mit.liquid");
+        file::delete("licenses/bsd3.liquid");
+        file::delete("licenses/bsd2.liquid");
+        file::delete("licenses/lgpl.liquid");
+        file::delete("licenses/mozilla.liquid");
+        file::delete("licenses/unlicense.liquid");
         false
     } 
     "LGPL" => {
         // https://www.gnu.org/licenses/lgpl-3.0.txt
-        file::rename("licenses/lgpl.liquid", "LICENSE");
+        file::rename("licenses/lgpl.liquid", "LICENSE");file::delete("licenses/apache.liquid");
+        file::delete("licenses/mit.liquid");
+        file::delete("licenses/bsd3.liquid");
+        file::delete("licenses/bsd2.liquid");
+        file::delete("licenses/gpl.liquid");
+        file::delete("licenses/mozilla.liquid");
+        file::delete("licenses/unlicense.liquid");
         false
     }
     "MOZILLA" => {
         // https://www.mozilla.org/media/MPL/2.0/index.48a3fe23ed13.txt
-        file::rename("licenses/mozilla.liquid", "LICENSE");
+        file::rename("licenses/mozilla.liquid", "LICENSE");file::delete("licenses/apache.liquid");
+        file::delete("licenses/mit.liquid");
+        file::delete("licenses/bsd3.liquid");
+        file::delete("licenses/bsd2.liquid");
+        file::delete("licenses/gpl.liquid");
+        file::delete("licenses/lgpl.liquid");
+        file::delete("licenses/unlicense.liquid");
         false
     }
     "PUBLIC" => {
         // https://unlicense.org/UNLICENSE
-        file::rename("licenses/unlicense.liquid", "LICENSE");
+        file::rename("licenses/unlicense.liquid", "LICENSE");file::delete("licenses/apache.liquid");
+        file::delete("licenses/mit.liquid");
+        file::delete("licenses/bsd3.liquid");
+        file::delete("licenses/bsd2.liquid");
+        file::delete("licenses/gpl.liquid");
+        file::delete("licenses/lgpl.liquid");
+        file::delete("licenses/mozilla.liquid");
         false
     }
     _ => true,
