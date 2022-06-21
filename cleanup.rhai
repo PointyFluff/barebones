@@ -9,5 +9,5 @@ if crate_type == "bin" {
     file::delete("src/lib.rs");
 } else if crate_type == "lib" {
     debug(`deleting src/main.rs`);
-    file::delete("scr/main.rs");
+    file::delete("src/main.rs");
 }
