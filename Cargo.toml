@@ -2,29 +2,7 @@
 name = "{{project-name}}"
 version = "0.1.0"
 authors = ["{{authors}}"]
-license = "MIT OR Apache-2.0"
+license = "{{license}}"
 readme = "README.md"
 edition = "2018"
 
-[dependencies]
-{% if crate_type == "bin" %}
-# bin deps go here
-# -------------------------
-{% endif %}
-{% if crate_type == "lib" %}
-# lib deps go here
-# -------------------------
-{% endif %}
-# other general dependencies
-
-{% if crate_type == "bin" %}
-[bin]
-path = "src/main.rs"
-name = "{{crate_name}}-cli"
-{% endif %}
-
-{% if crate_type == "lib" %}
-[lib]
-path = "src/lib.rs"
-name = "{{crate_name}}-lib"
-{% endif %}
